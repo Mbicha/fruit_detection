@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../webstatic/common.css">
+    <link rel="stylesheet" href="../webstatic/header.css">
+    <link rel="stylesheet" href="../webstatic/footer.css">
+    <title>Fruit Detection</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="../images/logo.svg" alt="Logo" class="navbar logo">            
+            <nav class="top-navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="view.html">View</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="section-center">
+            <div class="view-fruits">
+                <!-- One fruit -->
+                <article class="column fruit-card">
+                    <img src="../images/vegs_predicted.png" alt="predicted image" class="image-predict">
+                    
+                    <div class="predicted-class">
+                        Prediction: <b>Banana</b>
+                    </div>
+
+                    <div class="control-btns">
+                        <button class="btn" id="speak">Speak</button>
+                        <button class="btn" id="save">save</button>
+                    </div>
+
+                </article>
+                <!-- end one fruit -->
+                <!-- One fruit -->
+                <article class="column fruit-card">
+                    <img src="../images/apple_78.jpg" alt="predicted image" class="image-predict">
+                    
+                    <div class="predicted-class">
+                        Prediction: <b>Apple</b>
+                    </div>
+
+                    <div class="control-btns">
+                        <button class="btn" id="speak">Speak</button>
+                        <button class="btn" id="save">save</button>
+                    </div>
+
+                </article>
+                <!-- end one fruit -->
+                <!-- One fruit -->
+                <article class="column fruit-card">
+                    <img src="../images/banana_79.jpg" alt="predicted image" class="image-predict">
+                    
+                    <div class="predicted-class">
+                        Prediction: <b>Banana</b>
+                    </div>
+
+                    <div class="control-btns">
+                        <button class="btn" id="speak">Speak</button>
+                        <button class="btn" id="save">save</button>
+                    </div>
+
+                </article>
+                <!-- end one fruit -->
+                <!-- One fruit -->
+                <article class="column fruit-card">
+                    <img src="../images/orange_81.jpg" alt="predicted image" class="image-predict">
+                    
+                    <div class="predicted-class">
+                        Prediction: <b>Orange</b>
+                    </div>
+
+                    <div class="control-btns">
+                        <button class="btn" id="speak">Speak</button>
+                        <button class="btn" id="save">save</button>
+                    </div>
+
+                </article>
+                <!-- end one fruit -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="std-paragraph">Fruit Detection &#169 <span id="copyright-year">2017</span></p>
+    </footer>
+    <script src="../webdynamic/fruit.js"></script>
+</body>
+</html>
