@@ -1,66 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../webstatic/common.css">
-    <link rel="stylesheet" href="../webstatic/header.css">
-    <link rel="stylesheet" href="../webstatic/footer.css">
-    <title>Fruit Detection</title>
-</head>
-<body>
-    <header>
-        <div class="navbar">
-            <img src="../images/logo.svg" alt="Logo" class="navbar logo">            
-            <nav class="top-navbar">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="view.html">View</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
-                </ul>
-            </nav>
+{% extends 'base.html' %}
+{% block main %}
+<main class="flex flex-col items-center justify-start m-2">
+    <h1 class="flex flex-row border border-spacing-1 border-sol
+     border-green-700 rounded-lg bg-yellow-300 text-black text-3xl p-2
+     ">Fruit Classification</h1>
+     <section class="sm:flex-row flex flex-col p-2">
+        <!-- Choose card -->
+        <div class="flex flex-col bg-white p-2 m-2 shadow-2xl items-center">
+
+            <h2 class="text-2xl text-black">Upload fruit image to predict!</h2>
+            <form action="/", method="post", enctype="multipart/form-data", class="flex flex-col">
+                Choose Image: <input type="file" name="fruit_image" />
+                <input type="submit" value="Predict" class="border border-solid bg-green-700 text-black text-2xl mt-2 p-2 rounded-lg" />
+            </form>
+
+            <img src="{{ pic }}" alt="Original" class="h-40 w-40">
+
+            <h2>Classified as: <b>{{ prediction }}</b></h2>
         </div>
-    </header>
-    <!-- main -->
-    <main>
-        <div class="section-center">
-            <h1 class="project-title">
-                Fruit Detection
-            </h1>
-            <div class="fruit-container">
-                <article class="column container-original">
-                    <h2 class="img-title">
-                        original image
-                    </h2>
-                    <img src="../images/vegs.png" alt="original image" class="image-predict">
-                    <div class="control-btns">
-                        <button class="btn" id="choose">choose</button>
-                        <button class="btn" id="predict">predict</button>
-                    </div>
-                </article>
-                <article class="column container-predicted">
-                    <h2 class="img-title">
-                        predicted image
-                    </h2>
-                    <img src="../images/vegs_predicted.png" alt="original image" class="image-predict">
-
-                    <div class="predicted-class">
-                        Prediction: <b>Banana</b>
-                    </div>
-
-                    <div class="control-btns">
-                        <button class="btn" id="speak">Speak</button>
-                        <button class="btn" id="save">save</button>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p class="std-paragraph">Fruit Detection &#169 <span id="copyright-year">2017</span></p>
-    </footer>
-    <script src="../webdynamic/fruit.js"></script>
-</body>
-</html>
+        
+        <!-- End of card -->
+     </section>
+</main>
+{% endblock %}

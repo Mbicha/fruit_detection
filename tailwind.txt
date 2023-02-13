@@ -1,0 +1,21 @@
+Install tailwind
+    - npm install -D tailwindcss
+    - npx tailwindcss init
+
+Confingure template path 'tailwind.config.js'
+    /** @type {import('tailwindcss').Config} */
+    module.exports = {
+    content: ["./src/**/*.{html,js}"],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+    }
+
+Add the Tailwind directives to your CSS 'src/input.css'
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+Start the Tailwind CLI build process
+    - npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
